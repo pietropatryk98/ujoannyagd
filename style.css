@@ -1,0 +1,43 @@
+/* Podstawowe ustawienia strony */
+body {
+  font-family: Arial, sans-serif;
+  max-width: 800px;
+  margin: 20px auto;
+  background-image: url('tlo.jpg'); /* Twoje tło */
+  background-size: cover;          /* Dopasowanie do całego ekranu */
+  background-repeat: no-repeat;
+  background-position: center center;
+  color: #333;
+}
+
+/* Nagłówek strony */
+h1 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+/* Blok pojedynczego produktu */
+.produkt {
+  border: 1px solid #ccc;
+  padding: 15px;
+  margin-bottom: 20px;
+  background-color: rgba(255, 255, 255, 0.8); /* lekko przezroczyste tło dla lepszej czytelności */
+  border-radius: 8px;
+}
+
+/* Obrazki produktów */
+.produkt img {
+  max-width: 200px;
+  display: block;
+  margin-top: 10px;
+}
+
+/* Linki i podstrony */
+a {
+  color: #0066cc;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
