@@ -1,13 +1,24 @@
 /* Podstawowe ustawienia strony */
+html, body {
+  height: 100%;           /* Wysokość całego okna */
+  margin: 0;              /* Usuń domyślne marginesy */
+  padding: 0;             /* Usuń domyślne paddingi */
+}
+
 body {
   font-family: Arial, sans-serif;
-  max-width: 800px;
-  margin: 20px auto;
   background-image: url('tlo.jpg'); /* Twoje tło */
-  background-size: cover;          /* Dopasowanie do całego ekranu */
+  background-size: cover;           /* Dopasowanie do całego ekranu */
   background-repeat: no-repeat;
   background-position: center center;
   color: #333;
+}
+
+/* Kontener dla treści, aby produkty były wyśrodkowane i czytelne */
+.kontener {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 10px;
 }
 
 /* Nagłówek strony */
