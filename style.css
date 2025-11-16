@@ -1,54 +1,61 @@
-/* Podstawowe ustawienia strony */
+/* --- Pełnoekranowe tło --- */
 html, body {
-  height: 100%;           /* Wysokość całego okna */
-  margin: 0;              /* Usuń domyślne marginesy */
-  padding: 0;             /* Usuń domyślne paddingi */
+  height: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-  font-family: Arial, sans-serif;
-  background-image: url('tlo.jpg'); /* Twoje tło */
-  background-size: cover;           /* Dopasowanie do całego ekranu */
-  background-repeat: no-repeat;
-  background-position: center center;
+  font-family: 'Playfair Display', serif; /* artystyczna czcionka */
+  background-image: url('tlo.jpg');        /* Twoje tło */
+  background-size: cover;                  /* Dopasowanie do całego ekranu */
+  background-repeat: no-repeat;            /* Bez powtarzania */
+  background-position: center center;      /* Wyśrodkowane */
   color: #333;
 }
 
-/* Kontener dla treści, aby produkty były wyśrodkowane i czytelne */
+/* --- Nagłówek strony --- */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  background-color: rgba(255, 255, 255, 0.8); /* półprzezroczyste tło nagłówka */
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+/* Logo */
+.logo img {
+  height: 50px;
+}
+
+/* Menu */
+.menu a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: #0066cc;
+  font-weight: bold;
+  font-size: 20px; /* większa czcionka dla zakładek */
+}
+
+.menu a:hover {
+  text-decoration: underline;
+}
+
+/* --- Kontener treści --- */
 .kontener {
   max-width: 800px;
-  margin: 20px auto;
+  margin: 100px auto 20px auto; /* odstęp od nagłówka */
   padding: 10px;
-}
-
-/* Nagłówek strony */
-h1 {
-  text-align: center;
-  margin-bottom: 30px;
-}
-
-/* Blok pojedynczego produktu */
-.produkt {
-  border: 1px solid #ccc;
-  padding: 15px;
-  margin-bottom: 20px;
-  background-color: rgba(255, 255, 255, 0.8); /* lekko przezroczyste tło dla lepszej czytelności */
+  background-color: rgba(255, 255, 255, 0.8); /* półprzezroczyste tło treści */
   border-radius: 8px;
+  text-align: center;
 }
 
-/* Obrazki produktów */
-.produkt img {
-  max-width: 200px;
-  display: block;
-  margin-top: 10px;
-}
-
-/* Linki i podstrony */
-a {
-  color: #0066cc;
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
+/* --- Nagłówek w treści --- */
+.kontener h1 {
+  margin-bottom: 20px;
+  font-size: 48px; /* większa, artystyczna czcionka */
 }
