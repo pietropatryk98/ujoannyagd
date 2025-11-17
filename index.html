@@ -1,32 +1,157 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
-  <meta charset="UTF-8">
-  <title>U Joanny AGD</title>
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
-  
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sklep U Joanny – AGD i Papiernicze</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      scroll-behavior: smooth;
+      background: #d7e9ff; /* jasne niebieskie tło */
+      color: #002244; /* ciemnoniebieska czcionka */
+    }
+
+    header {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      height: 130px;
+      background: #ffffff;
+      display: flex;
+      align-items: center;
+      padding: 0 40px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+      z-index: 1000;
+    }
+
+    #logo-img {
+      height: 120px;
+      width: auto;
+      object-fit: contain;
+      margin-right: 50px;
+    }
+
+    nav { display: flex; gap: 25px; margin-left: 40px; }
+    nav a {
+      text-decoration: none;
+      font-weight: bold;
+      color: #001a33;
+      font-size: 22px;
+    }
+
+    .hero-video {
+      margin-top: 130px;
+      width: 100%;
+      text-align: center;
+    }
+
+    /* Larger height video */
+    .hero-video video {
+      width: 100%;
+      max-height: 500px; /* zwiększona wysokość */
+      object-fit: cover;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+      display: block;
+      margin: auto;
+    }
+
+    section {
+      padding: 90px 20px 40px;
+    }
+
+    h2 {
+      font-size: 30px;
+      margin-bottom: 20px;
+      border-bottom: 2px solid #001a33;
+      display: inline-block;
+      padding-bottom: 5px;
+      color: #001a33;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px,1fr));
+      gap: 20px;
+    }
+
+    .gallery div {
+      height: 150px;
+      background: #e9e9e9;
+      border: 1px solid #bbb;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-weight: bold;
+      color: #002244;
+    }
+
+    footer {
+      background: #003366;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+  </style>
 </head>
 <body>
-  <!-- Nagłówek -->
-  <header class="header">
-    <div class="logo">
-      <img src="logo.png" alt="Logo U Joanny GD">
-    </div>
-    <nav class="menu">
-      <a href="#">Szkoła</a>
-      <a href="#">Zabawa</a>
-      <a href="#">Biuro/Dom</a>
-    </nav>
-  </header>
 
-  <!-- Główna treść -->
-  <main class="kontener">
-    <h1>Witamy w U Joanny AGD!</h1>
-    <p>Wybierz kategorię z menu powyżej, aby zobaczyć dostępne produkty.</p>
-  </main>
+<header>
+  <img id="logo-img" src="logo.png" alt="Logo U Joanny">
+  <nav>
+    <a href="#swieta">Święta</a>
+    <a href="#szkola">Szkoła</a>
+    <a href="#zabawa">Zabawa</a>
+    <a href="#biuro">Biuro</a>
+    <a href="#dom">Dom</a>
+  </nav>
+</header>
+
+<div class="hero-video">
+  <video src="film.mp4" autoplay loop muted playsinline></video>
+</div>
+
+<section id="swieta">
+  <h2>Święta</h2>
+  <div class="gallery">
+    <div>Zdjęcie 1</div><div>Zdjęcie 2</div><div>Zdjęcie 3</div>
+  </div>
+</section>
+
+<section id="szkola">
+  <h2>Szkoła</h2>
+  <div class="gallery">
+    <div>Zdjęcie 1</div><div>Zdjęcie 2</div><div>Zdjęcie 3</div>
+  </div>
+</section>
+
+<section id="zabawa">
+  <h2>Zabawa</h2>
+  <div class="gallery">
+    <div>Zdjęcie 1</div><div>Zdjęcie 2</div><div>Zdjęcie 3</div>
+  </div>
+</section>
+
+<section id="biuro">
+  <h2>Biuro</h2>
+  <div class="gallery">
+    <div>Zdjęcie 1</div><div>Zdjęcie 2</div><div>Zdjęcie 3</div>
+  </div>
+</section>
+
+<section id="dom">
+  <h2>Dom</h2>
+  <div class="gallery">
+    <div>Zdjęcie 1</div><div>Zdjęcie 2</div><div>Zdjęcie 3</div>
+  </div>
+</section>
+
+<footer>
+  Kontakt: 000-000-000 • Adres: Olesno, ul. Małe Przedmieście 6
+</footer>
+
 </body>
 </html>
