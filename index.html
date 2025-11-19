@@ -1,180 +1,114 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sklep U Joanny – AGD i Papiernicze</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>U Joanny – AGD i Papiernicze</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
 
-  <!-- Modern fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
-
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Poppins', sans-serif;
-      scroll-behavior: smooth;
-      background: #d7e9ff;
-      color: #002244;
-    }
-
-    header {
-      position: fixed;
-      top: 0; left: 0; right: 0;
-      height: 130px;
-      background: #ffffff;
-      display: flex;
-      align-items: center;
-      justify-content: flex-start;
-      padding: 0 40px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.15);
-      z-index: 1000;
-    }
-
-    #logo-img {
-      height: 120px;
-      width: auto;
-      object-fit: contain;
-      margin-right: 40px;
-    }
-
-    nav {
-      display: flex;
-      gap: 25px;
-    }
-
-    nav a {
-      text-decoration: none;
-      font-weight: 600;
-      color: #001a33;
-      font-size: 20px;
-    }
-
-    .hero-video {
-      margin-top: 130px;
-      width: 100%;
-      text-align: center;
-    }
-
-    .hero-video video {
-      width: 100%;
-      max-height: 500px;
-      object-fit: cover;
-      border-radius: 10px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-      display: block;
-      margin: auto;
-    }
-
-    section {
-      padding: 90px 20px 40px;
-    }
-
-    h2 {
-      font-size: 28px;
-      margin-bottom: 20px;
-      border-bottom: 2px solid #001a33;
-      padding-bottom: 5px;
-      color: #001a33;
-      font-weight: 600;
-      font-family: 'Roboto', sans-serif;
-    }
-
-    .gallery {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(200px,1fr));
-      gap: 20px;
-    }
-
-    .gallery div {
-      height: 150px;
-      background: #e9e9e9;
-      border: 1px solid #bbb;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      font-weight: 600;
-      color: #002244;
-      border-radius: 8px;
-    }
-
-    footer {
-      background: #003366;
-      color: white;
-      text-align: center;
-      padding: 20px;
-      margin-top: 40px;
-      font-family: 'Roboto', sans-serif;
-    }
-
-    /* MOBILE RESPONSIVE */
-    @media (max-width: 768px) {
-
-      header {
-        height: 110px;
-        padding: 0 15px;
-      }
-
-      #logo-img {
-        height: 90px;
-        margin-right: 15px;
-      }
-
-      nav {
-        gap: 12px;
-      }
-
-      nav a {
-        font-size: 14px;
-      }
-
-      .hero-video video {
-        max-height: 180px;
-      }
-
-      h2 {
-        font-size: 22px;
-      }
-
-      .gallery {
-        grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
-      }
-    }
-
-    /* EXTRA SMALL MOBILE */
-    @media (max-width: 480px) {
-
-      header {
-        height: 100px;
-        padding: 0 10px;
-      }
-
-      #logo-img {
-        height: 70px;
-      }
-
-      nav {
-        flex-wrap: wrap;
-        gap: 8px;
-      }
-
-      nav a {
-        font-size: 12px;
-      }
-
-      .hero-video video {
-        max-height: 150px;
-      }
-
-      .gallery {
-        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
-      }
-    }
-  </style>
+<style>
+body{
+  margin:0;
+  font-family:'Montserrat',sans-serif;
+  background:url('tlo.jpg') no-repeat center center fixed;
+  background-size:cover;
+  color:#f5f5f5;
+}
+header{
+  position:fixed;
+  top:0; left:0; right:0;
+  height:110px;
+  background:rgba(255,255,255,0.95);
+  backdrop-filter:blur(6px);
+  display:flex;
+  align-items:center;
+  padding:0 20px;
+  box-shadow:0 2px 10px rgba(0,0,0,0.3);
+  z-index:1000;
+}
+#logo{
+  height:90px;
+  margin-right:20px;
+  cursor:pointer;
+}
+nav{display:flex; gap:20px;}
+nav a{
+  color:#003366;
+  font-weight:600;
+  text-decoration:none;
+  padding:6px 10px;
+  border-radius:5px;
+  background:rgba(255,255,255,0.6);
+}
+.hero{
+  margin-top:120px;
+}
+.hero video{
+  width:100%;
+  max-height:500px;
+  object-fit:cover;
+  border-radius:10px;
+  box-shadow:0 4px 15px rgba(0,0,0,0.5);
+}
+section{
+  padding:40px 20px;
+  background:rgba(0,0,0,0.55);
+  margin:20px;
+  border-radius:12px;
+}
+h2{
+  font-size:26px;
+  font-weight:600;
+  border-left:6px solid #ffd700;
+  padding-left:10px;
+  margin-bottom:20px;
+  color:#ffd700;
+}
+.slider{
+  display:flex;
+  overflow-x:auto;
+  gap:20px;
+  padding-bottom:10px;
+}
+.slider img{
+  height:180px;
+  border-radius:10px;
+  border:3px solid #ffd700;
+  cursor:pointer;
+}
+#lightbox{
+  position:fixed;
+  top:0; left:0; right:0; bottom:0;
+  background:rgba(0,0,0,0.9);
+  display:none;
+  align-items:center;
+  justify-content:center;
+  z-index:2000;
+}
+#lightbox img{
+  max-width:90%;
+  max-height:90%;
+}
+#lightboxClose{
+  position:fixed;
+  top:20px; right:30px;
+  font-size:40px;
+  color:white;
+  cursor:pointer;
+}
+footer{
+  background:rgba(0,0,0,0.7);
+  padding:20px;
+  text-align:center;
+  color:white;
+  margin-top:40px;
+}
+</style>
 </head>
-<body>
 
+<body>
 <header>
-  <img id="logo-img" src="logo.png" alt="Logo U Joanny">
+  <img id="logo" src="logo.png">
   <nav>
     <a href="#swieta">Święta</a>
     <a href="#szkola">Szkoła</a>
@@ -184,38 +118,44 @@
   </nav>
 </header>
 
-<div class="hero-video">
+<div class="hero">
   <video src="film.mp4" autoplay loop muted playsinline></video>
 </div>
 
-<section id="swieta">
-  <h2>Święta</h2>
-  <div class="gallery"><div>Zdjęcie 1</div><div>Zdjęcie 2</div><div>Zdjęcie 3</div></div>
-</section>
+<section id="swieta"><h2>Święta</h2><div class="slider" id="swietaSlider"></div></section>
+<section id="szkola"><h2>Szkoła</h2><div class="slider" id="szkolaSlider"></div></section>
+<section id="zabawa"><h2>Zabawa</h2><div class="slider" id="zabawaSlider"></div></section>
+<section id="biuro"><h2>Biuro</h2><div class="slider" id="biuroSlider"></div></section>
+<section id="dom"><h2>Dom</h2><div class="slider" id="domSlider"></div></section>
 
-<section id="szkola">
-  <h2>Szkoła</h2>
-  <div class="gallery"><div>Zdjęcie 1</div><div>Zdjęcie 2</div><div>Zdjęcie 3</div></div>
-</section>
+<footer>Kontakt: 000-000-000 • Olesno, ul. Małe Przedmieście 6</footer>
 
-<section id="zabawa">
-  <h2>Zabawa</h2>
-  <div class="gallery"><div>Zdjęcie 1</div><div>Zdjęcie 2</div><div>Zdjęcie 3</div></div>
-</section>
+<div id="lightbox"><span id="lightboxClose">×</span><img id="lightboxImg"></div>
 
-<section id="biuro">
-  <h2>Biuro</h2>
-  <div class="gallery"><div>Zdjęcie 1</div><div>Zdjęcie 2</div><div>Zdjęcie 3</div></div>
-</section>
+<script>
+function load(prefix, max, id){
+  const box=document.getElementById(id);
+  for(let i=1;i<=max;i++){
+    const img=document.createElement('img');
+    img.src=prefix+i+'.jpg';
+    img.onerror=()=>img.remove();
+    img.onclick=()=>openLightbox(img.src);
+    box.appendChild(img);
+  }
+}
+const MAX=50;
+load('swieta',MAX,'swietaSlider');
+load('szkola',MAX,'szkolaSlider');
+load('zabawa',MAX,'zabawaSlider');
+load('biuro',MAX,'biuroSlider');
+load('dom',MAX,'domSlider');
 
-<section id="dom">
-  <h2>Dom</h2>
-  <div class="gallery"><div>Zdjęcie 1</div><div>Zdjęcie 2</div><div>Zdjęcie 3</div></div>
-</section>
-
-<footer>
-  Kontakt: 000-000-000 • Adres: Olesno, ul. Małe Przedmieście 6
-</footer>
-
+function openLightbox(src){
+  document.getElementById("lightboxImg").src=src;
+  document.getElementById("lightbox").style.display="flex";
+}
+document.getElementById("lightboxClose").onclick=()=>document.getElementById("lightbox").style.display="none";
+document.getElementById("logo").onclick=()=>window.scrollTo({top:0,behavior:'smooth'});
+</script>
 </body>
 </html>
