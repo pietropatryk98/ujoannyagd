@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>U Joanny – AGD i Papiernicze</title>
+
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
 
 <style>
@@ -14,6 +15,8 @@ body{
   background-size:cover;
   color:#f5f5f5;
 }
+
+/* HEADER */
 header{
   position:fixed;
   top:0; left:0; right:0;
@@ -22,16 +25,21 @@ header{
   backdrop-filter:blur(6px);
   display:flex;
   align-items:center;
+  justify-content:space-between;
   padding:0 20px;
   box-shadow:0 2px 10px rgba(0,0,0,0.3);
   z-index:1000;
 }
 #logo{
   height:90px;
-  margin-right:20px;
   cursor:pointer;
 }
-nav{display:flex; gap:20px;}
+
+/* NAVIGATION */
+nav{
+  display:flex;
+  gap:20px;
+}
 nav a{
   color:#003366;
   font-weight:600;
@@ -40,16 +48,52 @@ nav a{
   border-radius:5px;
   background:rgba(255,255,255,0.6);
 }
+
+/* HAMBURGER */
+#hamburger{
+  display:none;
+  font-size:40px;
+  cursor:pointer;
+  color:#003366;
+}
+#mobileMenu{
+  position:fixed;
+  top:110px;
+  right:0;
+  background:rgba(0,0,0,0.85);
+  width:200px;
+  display:none;
+  flex-direction:column;
+  padding:20px;
+  z-index:1500;
+}
+#mobileMenu a{
+  color:white;
+  text-decoration:none;
+  padding:10px 0;
+  font-size:20px;
+}
+
+/* MOBILE RESPONSIVE */
+@media(max-width:700px){
+  nav{ display:none; }
+  #hamburger{ display:block; }
+  #logo{ height:65px; }
+}
+
+/* HERO VIDEO */
 .hero{
   margin-top:120px;
 }
 .hero video{
   width:100%;
-  max-height:500px;
+  max-height:260px;
   object-fit:cover;
   border-radius:10px;
   box-shadow:0 4px 15px rgba(0,0,0,0.5);
 }
+
+/* SECTIONS */
 section{
   padding:40px 20px;
   background:rgba(0,0,0,0.55);
@@ -64,6 +108,15 @@ h2{
   margin-bottom:20px;
   color:#ffd700;
 }
+
+/* ABOUT US */
+#onasText{
+  font-size:18px;
+  line-height:1.6;
+  padding:10px;
+}
+
+/* SLIDER */
 .slider{
   display:flex;
   overflow-x:auto;
@@ -76,6 +129,8 @@ h2{
   border:3px solid #ffd700;
   cursor:pointer;
 }
+
+/* LIGHTBOX */
 #lightbox{
   position:fixed;
   top:0; left:0; right:0; bottom:0;
@@ -96,6 +151,8 @@ h2{
   color:white;
   cursor:pointer;
 }
+
+/* FOOTER */
 footer{
   background:rgba(0,0,0,0.7);
   padding:20px;
@@ -109,18 +166,42 @@ footer{
 <body>
 <header>
   <img id="logo" src="logo.png">
+
   <nav>
+    <a href="#onas">O nas</a>
     <a href="#swieta">Święta</a>
     <a href="#szkola">Szkoła</a>
     <a href="#zabawa">Zabawa</a>
     <a href="#biuro">Biuro</a>
     <a href="#dom">Dom</a>
   </nav>
+
+  <div id="hamburger">☰</div>
 </header>
+
+<div id="mobileMenu">
+  <a href="#onas">O nas</a>
+  <a href="#swieta">Święta</a>
+  <a href="#szkola">Szkoła</a>
+  <a href="#zabawa">Zabawa</a>
+  <a href="#biuro">Biuro</a>
+  <a href="#dom">Dom</a>
+</div>
 
 <div class="hero">
   <video src="film.mp4" autoplay loop muted playsinline></video>
 </div>
+
+<section id="onas">
+  <h2>O nas</h2>
+  <div id="onasText">
+    Sklep „U Joanny” to rodzinne miejsce z wieloletnią tradycją. 
+    Oferujemy szeroki wybór artykułów AGD, produktów papierniczych, 
+    dekoracji oraz sezonowych ozdób świątecznych. Dbamy o jakość, 
+    miłą obsługę i przystępne ceny. Zapraszamy do naszego sklepu 
+    w Oleśnie przy ul. Małe Przedmieście 6!
+  </div>
+</section>
 
 <section id="swieta"><h2>Święta</h2><div class="slider" id="swietaSlider"></div></section>
 <section id="szkola"><h2>Szkoła</h2><div class="slider" id="szkolaSlider"></div></section>
@@ -133,6 +214,7 @@ footer{
 <div id="lightbox"><span id="lightboxClose">×</span><img id="lightboxImg"></div>
 
 <script>
+// LOAD IMAGES
 function load(prefix, max, id){
   const box=document.getElementById(id);
   for(let i=1;i<=max;i++){
@@ -150,12 +232,22 @@ load('zabawa',MAX,'zabawaSlider');
 load('biuro',MAX,'biuroSlider');
 load('dom',MAX,'domSlider');
 
+// LIGHTBOX
 function openLightbox(src){
   document.getElementById("lightboxImg").src=src;
   document.getElementById("lightbox").style.display="flex";
 }
 document.getElementById("lightboxClose").onclick=()=>document.getElementById("lightbox").style.display="none";
+
+// SCROLL TOP
 document.getElementById("logo").onclick=()=>window.scrollTo({top:0,behavior:'smooth'});
+
+// HAMBURGER MENU
+document.getElementById("hamburger").onclick=function(){
+  const menu=document.getElementById("mobileMenu");
+  menu.style.display = (menu.style.display==="flex") ? "none" : "flex";
+};
 </script>
+
 </body>
 </html>
