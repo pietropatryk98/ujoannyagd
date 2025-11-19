@@ -160,6 +160,20 @@ footer{
   color:white;
   margin-top:40px;
 }
+
+@keyframes sway {
+  0% { transform: rotate(-2deg); }
+  50% { transform: rotate(2deg); }
+  100% { transform: rotate(-2deg); }
+}
+.slider img {
+  transform-origin: center bottom;
+  transition: transform 0.3s ease;
+}
+.slider img:hover {
+  animation: sway 0.9s ease-in-out infinite;
+}
+
 </style>
 </head>
 
@@ -209,7 +223,6 @@ footer{
 <section id="biuro"><h2>Biuro</h2><div class="slider" id="biuroSlider"></div></section>
 <section id="dom"><h2>Dom</h2><div class="slider" id="domSlider"></div></section>
 
-<footer>Kontakt: 000-000-000 • Olesno, ul. Małe Przedmieście 6</footer>
 <section id="kontakt" style="padding:40px 20px;background:rgba(0,0,0,0.55);margin:20px;border-radius:12px;">
 <h2>Formularz kontaktowy</h2>
 <form action="mailto:pietropatryk98@gmail.com" method="post" enctype="text/plain">
@@ -282,7 +295,7 @@ document.getElementById("hamburger").onclick=function(){
 
 <h3 style="margin-top:25px;color:#ffd700;font-size:22px;">🕒 Godziny otwarcia</h3>
 <ul style="list-style:none;padding-left:0;font-size:18px;line-height:1.6;">
-  <li>Poniedziałek – Piątek: <b>8:00 – 17:00</b></li>
+  <li>Poniedziałek – Piątek: <b>9:00 – 17:00</b></li>
   <li>Sobota: <b>9:00 – 13:00</b></li>
   <li>Niedziela: <b>Nieczynne</b></li>
 </ul>
