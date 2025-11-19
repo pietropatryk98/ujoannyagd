@@ -210,6 +210,22 @@ footer{
 <section id="dom"><h2>Dom</h2><div class="slider" id="domSlider"></div></section>
 
 <footer>Kontakt: 000-000-000 • Olesno, ul. Małe Przedmieście 6</footer>
+<section id="kontakt" style="padding:40px 20px;background:rgba(0,0,0,0.55);margin:20px;border-radius:12px;">
+<h2>Formularz kontaktowy</h2>
+<form action="mailto:pietropatryk98@gmail.com" method="post" enctype="text/plain">
+<label>Imię i nazwisko:</label>
+<input type="text" name="Imię" style="width:100%;padding:10px;border-radius:6px;border:none;margin-bottom:10px;" required>
+
+<label>Email:</label>
+<input type="email" name="Email" style="width:100%;padding:10px;border-radius:6px;border:none;margin-bottom:10px;" required>
+
+<label>Wiadomość:</label>
+<textarea name="Wiadomość" rows="5" style="width:100%;padding:10px;border-radius:6px;border:none;margin-bottom:10px;" required></textarea>
+
+<button type="submit" style="padding:10px 20px;background:#ffd700;border:none;color:black;font-weight:600;border-radius:6px;cursor:pointer;">Wyślij</button>
+</form>
+</section>
+
 
 <div id="lightbox"><span id="lightboxClose">×</span><img id="lightboxImg"></div>
 
@@ -248,6 +264,30 @@ document.getElementById("hamburger").onclick=function(){
   menu.style.display = (menu.style.display==="flex") ? "none" : "flex";
 };
 </script>
+
+
+
+
+
+<section style="padding:40px 20px;background:rgba(0,0,0,0.55);margin:20px;border-radius:12px;">
+<h2>Dane kontaktowe</h2>
+
+<p style="font-size:18px;display:flex;align-items:center;gap:10px;">
+<span style="font-size:24px;">📞</span> Telefon: <b>000-000-000</b>
+</p>
+
+<p style="font-size:18px;display:flex;align-items:center;gap:10px;">
+<span style="font-size:24px;">📍</span> Adres: <b>Olesno, ul. Małe Przedmieście 6</b>
+</p>
+
+<h3 style="margin-top:25px;color:#ffd700;font-size:22px;">🕒 Godziny otwarcia</h3>
+<ul style="list-style:none;padding-left:0;font-size:18px;line-height:1.6;">
+  <li>Poniedziałek – Piątek: <b>8:00 – 17:00</b></li>
+  <li>Sobota: <b>9:00 – 13:00</b></li>
+  <li>Niedziela: <b>Nieczynne</b></li>
+</ul>
+
+</section>
 
 </body>
 </html>
